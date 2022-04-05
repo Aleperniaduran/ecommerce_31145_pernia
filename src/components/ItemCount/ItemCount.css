@@ -1,0 +1,48 @@
+.ItemCount-container {
+    width: 250px;
+    min-height: 100px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 25px;
+    background-color: #d7d7d7;
+}
+
+.ItemCount-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 30px;
+    background-color: white;
+    margin-top: 25px;
+}
+
+.ItemCount-controls button {
+    border: none;
+    background-color: transparent;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.ItemCount-controls p {
+    margin: 0;
+    margin-top: 3px;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 5px 0;
+}
+
+.no-stock {
+    color: red;
+    font-size: .75rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    margin-top: 5px;
+}

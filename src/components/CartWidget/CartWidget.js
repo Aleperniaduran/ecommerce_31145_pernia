@@ -3,8 +3,8 @@ import Image from './CartWidget.svg'
 
 const CartWidget = () => {
     return(
-        <div class="CartWidgetContainer">
-            <img src={Image}/>
+        <div className="CartWidgetContainer">
+            <img src={Image} alt='Cart icon' />
             <p>4</p>
         </div>
     )

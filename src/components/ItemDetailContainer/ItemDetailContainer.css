@@ -1,0 +1,11 @@
+.Product-Details-Page-Container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+}
+
+.Product-Details-Page-Container h1 {
+    text-align: center;
+    color: rgb(26, 26, 114);
+}

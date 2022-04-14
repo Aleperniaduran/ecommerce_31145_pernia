@@ -1,0 +1,11 @@
+.Message-404 {
+    width: fit-content;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.Message-404 h1 {
+    color: #2d2d2d;
+    font-size: 40px;
+    padding: 0 25px;
+}

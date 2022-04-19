@@ -38,7 +38,7 @@
 .product-info p {
     text-align: center;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 11px;
 }
 
@@ -59,4 +59,18 @@
     font-size: 10px;
     font-weight: bold;
     margin-bottom: 0;
+}
+
+.Ver-Detalle {
+    text-decoration: underline;
+    color: #2d2d2d !important;
+    background-color: white !important;
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+    border: none;
+}
+
+.Ver-Detalle:hover {
+    color: blue !important;
 }

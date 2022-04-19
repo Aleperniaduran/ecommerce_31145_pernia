@@ -1,0 +1,32 @@
+.Product-Details-Page {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    overflow: hidden;
+    padding: 30px;
+}
+.Product-Details-Page picture,
+.Product-Details-Page section {
+    flex: 1 1;
+    border: 1px solid #2d2d2d;
+    overflow: hidden;
+}
+
+.Product-Details-Page picture {
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    max-height: 320px;
+}
+
+.Product-Details-Page section {
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+}
+
+.prod-info-container {
+    padding: 20px;
+}
+
+h2.prod-info {
+    margin-top: 0;
+}

@@ -1,6 +1,18 @@
-import './ItemDetail.css'
+import './ItemDetail.css';
+import { useState } from "react";
+import { Link } from 'react-router-dom'
+import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ name, img, category, description, price, stock }) => {
+    const [quantity, setQuantity] = useState(0)
+    const handleOnAdd = (quantity) => {
+        if (quantity === 0) {
+            console.log('Agrega al menos un producto')
+        } else {
+            console.log(`Se agregaron ${quantity} productos`);
+            setQuantity(quantity)
+        }
+    }
     return (
         <article className="Product-Details-Page">
             <picture>
@@ -22,6 +34,8 @@ const ItemDetail = ({ name, img, category, description, price, stock }) => {
                     <p className="prod-info">
                         <b>Cant. Disponible:</b> {stock}
                     </p>
+
+                    {quantity > 0 ? <Link to='/cart' className="">Finalizar compra</Link> : <ItemCount initial={0} stock={stock} onAdd={handleOnAdd} /> }
                 </div>
             </section>
         </article>

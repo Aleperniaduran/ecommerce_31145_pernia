@@ -15,7 +15,6 @@
 .Product-Details-Page picture {
     border-right: none;
     border-radius: 10px 0 0 10px;
-    max-height: 320px;
 }
 
 .Product-Details-Page section {
@@ -29,4 +28,9 @@
 
 h2.prod-info {
     margin-top: 0;
+}
+
+.ItemImg {
+    height: 100%;
+    object-fit: cover;
 }

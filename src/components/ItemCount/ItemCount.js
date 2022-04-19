@@ -21,7 +21,6 @@ const ItemCount = ({ initial, stock, onAdd }) => {
         return(
             <div className='ItemCount-container'>
                 <div>
-                    <p>Item details</p>
                     <div className='ItemCount-controls'>
                         <button onClick={decrease}>-</button>
                         <p>{count}</p>
@@ -36,7 +35,6 @@ const ItemCount = ({ initial, stock, onAdd }) => {
         return(
                 <div className='ItemCount-container'>
                 <div>
-                    <p>Item details</p>
                     <div className='ItemCount-controls'>
                         <button onClick={decrease}>-</button>
                         <p>{0}</p>

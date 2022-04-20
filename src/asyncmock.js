@@ -34,6 +34,42 @@ const products = [
         stock: 15,
         description: 'Esta es la descripcion del producto 4',
         price: 400,
+    },
+    {
+        id: '5',
+        name: 'Producto 5',
+        category: 'ProductoA',
+        img: 'https://i0.wp.com/velocitycommerce.co.uk/wp-content/uploads/2020/06/Unbranded.png?fit=990%2C556&ssl=1',
+        stock: 15,
+        description: 'Esta es la descripcion del producto 5',
+        price: 800,
+    },
+    {
+        id: '6',
+        name: 'Producto 6',
+        category: 'ProductoB',
+        img: 'https://images.squarespace-cdn.com/content/v1/51d151b1e4b05d425c859fc9/1602648741990-RZVDR10FXJ48L626SJLO/rejuvenating-set?format=1000w',
+        stock: 15,
+        description: 'Esta es la descripcion del producto 6',
+        price: 800,
+    },
+    {
+        id: '7',
+        name: 'Producto 7',
+        category: 'ProductoC',
+        img: 'https://wigmoretrading.com/wp-content/uploads/2021/11/beautypackaging-8a3d59f4c3a240c9b174de4d3cccae50.jpg',
+        stock: 15,
+        description: 'Esta es la descripcion del producto 7',
+        price: 800,
+    },
+    {
+        id: '8',
+        name: 'Producto 8',
+        category: 'ProductoD',
+        img: 'https://liquidcreativity.com.au/wp-content/uploads/2016/02/muji_bath-1200x720.jpg',
+        stock: 230,
+        description: 'Esta es la descripcion del producto 8',
+        price: 600,
     }
 ]
 

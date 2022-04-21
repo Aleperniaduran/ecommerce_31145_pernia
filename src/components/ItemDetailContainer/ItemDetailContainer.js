@@ -29,7 +29,7 @@ const ItemDetailContainer = ({ setCart, cart }) => {
   return (
     <div className="Product-Details-Page-Container">
           {loading ? (
-            <h2 className="">Cargando...</h2>
+            <h2 className="loading-message">Cargando...</h2>
           ) : product ? (
             <div>
               <h1>This is the PDP (Product Detail Page)</h1>

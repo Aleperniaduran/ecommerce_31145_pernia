@@ -4,7 +4,7 @@ import { getProductById } from "../../asyncmock";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({ setCart, cart }) => {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
   const { productId } = useParams();
@@ -33,7 +33,7 @@ const ItemDetailContainer = () => {
           ) : product ? (
             <div>
               <h1>This is the PDP (Product Detail Page)</h1>
-              <ItemDetail {...product} />
+              <ItemDetail {...product} setCart={setCart} cart={cart} />
             </div>
           ) : (
             <h1 className="">

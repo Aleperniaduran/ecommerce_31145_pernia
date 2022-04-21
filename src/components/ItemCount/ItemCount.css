@@ -1,11 +1,5 @@
 .ItemCount-container {
-    width: 250px;
-    min-height: 100px;
-    margin: auto;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 25px;
-    background-color: #d7d7d7;
+    max-width: 400px;
 }
 
 .ItemCount-controls {

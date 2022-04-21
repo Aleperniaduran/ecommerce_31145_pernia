@@ -1,7 +1,9 @@
 .Products-row {
     display: flex;
-    justify-content: space-around;
-    max-width: 85 vw;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 57vw;
     margin: auto;
     margin-bottom: 50px;
     padding: 0;

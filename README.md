@@ -1,3 +1,7 @@
+# Project Description
+
+I'm building a basic ecommerce template using React Js and CSS. The main goal is to apply al the basic concepts provided in the course and make a fully functional site.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -3,15 +3,19 @@ import CartWidget from '../CartWidget/CartWidget';
 import { NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import { getCategories } from '../../asyncmock';
+import CartContext from "../../Context/CartContext"
+import { useContext } from "react"
 
 const NavBar = () => {
     const [categories, setCategories] = useState([])
+    const { cart } = useContext(CartContext)
 
     useEffect(() => {
         getCategories().then(categories => {
             setCategories(categories)
         })
     }, [])
+
     return(
         <nav className="Nav-bar">
             <NavLink to='/'>
@@ -26,7 +30,7 @@ const NavBar = () => {
                 >{cat.description}</NavLink>)}
             </div>
 
-            <CartWidget />
+            {cart.length > 0 ? <CartWidget /> : <div></div>}
         </nav>
     )
 }

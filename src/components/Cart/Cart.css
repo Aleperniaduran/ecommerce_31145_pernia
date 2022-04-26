@@ -1,4 +1,31 @@
+.cart-main-container {
+    width: 600px;
+    margin: auto;
+}
+
 .cart-header {
     text-align: center;
     font-size: 40px;
 }
+
+table.cart-elements-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th.product-name-th,
+td.cart-element-detail-name {
+    width: 40%;
+    text-align: left;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

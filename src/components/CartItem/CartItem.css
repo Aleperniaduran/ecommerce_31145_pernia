@@ -1,0 +1,48 @@
+.cart-element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px;
+}
+
+.cart-element-detail {
+    margin-right: 10px;
+    max-width: 150px;
+    padding: 10px;
+}
+
+.no-products-mssg {
+    text-align: center;
+}
+
+.back-to-list-link {
+    color: blue;
+    text-align: center;
+    display: block;
+}
+
+.remove-item-button {
+    border: none;
+    background-color: transparent;
+    color: red;
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+    width: 50px;
+}
+
+.cart-table-titles {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+}
+
+.last-item-title {
+    width: 50px;
+}
+
+.cart-total {
+    color: red;
+    font-weight: 700;
+    float: right;
+}

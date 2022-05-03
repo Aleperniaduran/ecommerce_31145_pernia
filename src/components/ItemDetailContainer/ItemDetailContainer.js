@@ -1,25 +1,23 @@
 import "./ItemDetailContainer.css";
 import { useEffect, useState } from "react";
-import { getProductById } from "../../asyncmock";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import { firestoreDb } from '../../services/firebase'
+import { getDoc, doc } from 'firebase/firestore'
 
 const ItemDetailContainer = ({ setCart, cart }) => {
   const [product, setProduct] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const { productId } = useParams();
 
   useEffect(() => {
-    getProductById(productId)
-      .then((response) => {
-        setProduct(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+
+    getDoc(doc(firestoreDb, 'products', productId)).then(response => {
+      console.log(response)
+      const product = { id: response.id, ...response.data()}
+      console.log(product)
+      setProduct(product)
+    })
 
     return () => {
       setProduct();
@@ -29,7 +27,7 @@ const ItemDetailContainer = ({ setCart, cart }) => {
   return (
     <div className="Product-Details-Page-Container">
           {loading ? (
-            <h2 className="">Cargando...</h2>
+            <h2 className="loading-message">Cargando...</h2>
           ) : product ? (
             <div>
               <h1>This is the PDP (Product Detail Page)</h1>

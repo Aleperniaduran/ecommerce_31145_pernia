@@ -46,3 +46,28 @@
     font-weight: 700;
     float: right;
 }
+
+.action-buttons {
+    display: flex;
+}
+
+.boton-orden {
+    margin-left: 30px;
+}
+
+.boton-orden,
+.clear-cart-button {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px solid #000000;
+}
+
+.boton-orden:hover,
+.clear-cart-button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 15px;
+    padding: 10px;
+}

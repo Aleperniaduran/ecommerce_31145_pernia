@@ -2,11 +2,13 @@ import './CartItem.css'
 import { useContext } from "react"
 import CartContext from "../../Context/CartContext"
 import { Link } from 'react-router-dom'
+import Form from '../Form/Form'
 
 const CartItem = () => {
 
   const { cart, removeItem } = useContext(CartContext)
   const initialValue = 0;
+  const { clearCart } = useContext(CartContext)  
   const total = cart.reduce((accumulator,current) => accumulator + current.price * current.quantity, initialValue)
 
   if(cart.length === 0) {
@@ -42,6 +44,15 @@ const CartItem = () => {
           }
 
           <p className='cart-total'>Total del carro: {total}</p>
+
+          <p className="">
+          Los costos de envio e impuestos seran calculados durante el checkout.
+        </p>
+
+        <div className='action-buttons'>
+          <button onClick={() => clearCart()} className="clear-cart-button">Limpiar carrtio</button>
+          <Form />
+        </div>
       </div>
     );
   };

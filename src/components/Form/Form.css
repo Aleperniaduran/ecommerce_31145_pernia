@@ -1,0 +1,58 @@
+.form-modal,
+.order-confirmation-modal {
+    background-color: rgba(0, 0, 0, .9);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modal-container,
+.order-confirmation-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgrey;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.modal-header,
+.order-confirmation-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal-title {
+    margin: 0;
+}
+
+.cerrar-modal {
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: 20px;
+    height: fit-content;
+}
+
+input {
+    display: block;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid darkgray;
+    min-width: 250px;
+}
+
+.boton-enviar-orden {
+    margin-top: 25px;
+    border-radius: 15px;
+    color: #FFFFFF;
+    background-color: #000000;
+    padding: 10px;
+}

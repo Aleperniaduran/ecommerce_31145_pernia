@@ -4,11 +4,26 @@ const CartContext = createContext();
 
 export const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  console.log(cart);
+ console.log(cart);
 
-  const addItem = (productToAdd) => {
-    setCart([...cart, productToAdd]);
-  };
+ const addItem = (productToAdd) => {
+  if(!isInCart(productToAdd.id)) {
+      setCart([...cart, productToAdd])
+  } else {
+      const newProducts = cart.map(prod => {
+          if(prod.id === productToAdd.id) {
+              const newProduct = {
+                  ...prod,
+                  quantity: productToAdd.quantity
+              }
+              return newProduct
+          } else {
+              return prod
+          }
+      })
+      setCart(newProducts)
+  }
+};
 
   const getQuantity = () => {
     let count = 0;

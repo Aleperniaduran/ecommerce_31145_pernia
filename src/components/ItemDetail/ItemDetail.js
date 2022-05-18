@@ -6,7 +6,7 @@ import CartContext from '../../Context/CartContext'
 
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
-    const { addItem, isInCart } = useContext(CartContext)
+    const { addItem, isInCart, getQuantityProd } = useContext(CartContext)
 
     const handleAdd = (count) => {
         const productObj = {
@@ -37,7 +37,16 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
                         <b>Cant. Disponible:</b> {stock}
                     </p>
 
-                    {isInCart(id) ? <Link to='/cart' className="">Ir al carrito</Link> : <ItemCount initial={0} stock={stock} onAdd={handleAdd} /> }
+                    {isInCart(id)
+                        ? <div><ItemCount initial={getQuantityProd(id)} stock={stock} onAdd={handleAdd} /> <Link to='/cart' className="">Ir al carrito</Link></div>
+                        : <ItemCount initial={1} stock={stock} onAdd={handleAdd} /> }
+
+                    {/* { 
+                        false  
+                            ? <Link to='/cart' className='Option'>Ir al carrito</Link> 
+                            : <ItemCount onAdd={handleAdd} stock={stock} initial={getQuantityProd(id)}/> 
+                    }  */}
+                    
                 </div>
             </section>
         </article>
